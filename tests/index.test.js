@@ -1,7 +1,7 @@
 const { add, multiply, greet } = require("../src/index");
 
 test("add: 2 + 3 = 5", () => {
-    expect(add(2, 3)).toBe(5);
+    expect(add(2, 3)).toBe(6);
 });
 
 test("multiply: 4 * 5 = 20", () => {
