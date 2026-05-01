@@ -18,6 +18,12 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Cache node_modules
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('**/package-lock.json') }}
+
       - name: Install dependencies
         run: npm install
 
@@ -26,4 +32,3 @@ jobs:
 
       - name: Run build
         run: npm run build
-        
